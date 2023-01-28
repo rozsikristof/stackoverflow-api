@@ -1,1 +1,7 @@
-<p>search-page works!</p>
+<div>
+  <app-input-field
+    placeholder="Search for a topic on Stackoverflow..."
+    [initValue]="searchTerm"
+    (userEventResult)="receiveInputValue($event)"
+  ></app-input-field>
+</div>

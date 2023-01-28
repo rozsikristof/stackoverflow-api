@@ -39,7 +39,6 @@
         "no-unexpected-multiline": "warn",
         "no-unreachable": "warn",
         "no-unsafe-finally": "warn",
-        "no-unused-vars": "warn",
         "camelcase": "warn",
         "eqeqeq": "error",
         "no-else-return": "warn",
@@ -56,7 +55,8 @@
         "quotes": [
           "error",
           "single"
-        ]
+        ],
+        "@typescript-eslint/no-explicit-any": "off"
       }
     },
     {
