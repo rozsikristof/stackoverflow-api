@@ -1,7 +1,12 @@
-<div>
-  <app-input-field
-    placeholder="Search for a topic on Stackoverflow..."
-    [initValue]="searchTerm"
-    (userEventResult)="receiveInputValue($event)"
-  ></app-input-field>
-</div>
+<app-input-field
+  class="search__input"
+  placeholder="Search for a topic on Stackoverflow..."
+  [initValue]="searchTerm"
+  (userEventResult)="receiveInputValue($event)"
+></app-input-field>
+<h2>Search Results</h2>
+<ul class="search__answer-wrapper">
+  <ng-container *ngFor="let searchItem of (searchResult$ | async)">
+    <app-search-result-item [searchItem]="searchItem"></app-search-result-item>
+  </ng-container>
+</ul>

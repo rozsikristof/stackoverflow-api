@@ -2,10 +2,15 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+const importedComponents = [
+  CommonModule,
+  FormsModule
+];
+
 @Component({
   selector: 'app-input-field',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [importedComponents],
   templateUrl: './input-field.component.html',
   styleUrls: ['./input-field.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
