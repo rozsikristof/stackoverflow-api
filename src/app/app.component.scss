@@ -1,16 +1,26 @@
 .app__header {
+  height: 75px;
+}
+
+.app__header-title {
+  font-size: 24px;
+}
+
+.app__header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 700px;
   background-color: #e39309;
-  width: 400px;
-  height: 70px;
   border-bottom-right-radius: 40px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
-.app__header-nav {
-  height: 100%;
+.app__header-navbar {
+  width: 250px;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .app__header-nav-button {
