@@ -30,6 +30,32 @@
             "prefix": "app",
             "style": "kebab-case"
           }
+        ],
+        "semi": "error",
+        "eol-last": "error",
+        "no-cond-assign": "error",
+        "no-debugger": "error",
+        "no-self-compare": "error",
+        "no-unexpected-multiline": "warn",
+        "no-unreachable": "warn",
+        "no-unsafe-finally": "warn",
+        "no-unused-vars": "warn",
+        "camelcase": "warn",
+        "eqeqeq": "error",
+        "no-else-return": "warn",
+        "no-inline-comments": "warn",
+        "no-magic-numbers": "warn",
+        "prefer-const": "warn",
+        "max-len": [
+          "warn",
+          {
+            "code": 135
+          }
+        ],
+        "no-trailing-spaces": "warn",
+        "quotes": [
+          "error",
+          "single"
         ]
       }
     },
