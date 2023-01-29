@@ -1,0 +1,24 @@
+@import 'mixins';
+@import 'variables';
+
+.pagination {
+  width: $default-width;
+  @include flex($justify-content: space-between);
+}
+
+.pagination__button {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &--disabled {
+    color: lightgray;
+    text-decoration: none;
+  }
+}
+
+.pagination__number {
+  font-weight: 600;
+}

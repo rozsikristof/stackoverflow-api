@@ -11,6 +11,8 @@ import { AxiosError } from 'axios';
 import { FormatError } from 'src/app/common/pipes/format-error';
 import { LoadingComponent } from 'src/app/components/common/loading/loading.component';
 import { AbstractControl, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PaginationComponent } from 'src/app/components/pagination/pagination.component';
+
 
 const IMPORTED_COMPONENTS = [
   CommonModule,
@@ -19,7 +21,8 @@ const IMPORTED_COMPONENTS = [
   FormatError,
   LoadingComponent,
   ReactiveFormsModule,
-  FormsModule
+  FormsModule,
+  PaginationComponent
 ];
 
 @Component({
@@ -32,11 +35,12 @@ const IMPORTED_COMPONENTS = [
 })
 export class SearchPageComponent {
   searchTerm = '';
+  searchFormGroup: FormGroup = {} as FormGroup;
   searchResult$ = new BehaviorSubject<SearchResultItem[] | null>(null);
   searchResultsError$ = new BehaviorSubject<ErrorResponse | null>(null);
   searchHasParsingError$ = new BehaviorSubject<boolean>(false);
   isLoading = false;
-  searchFormGroup: FormGroup = {} as FormGroup;
+  pageNumber = 1;
 
   constructor(
     private readonly router: Router,
@@ -44,6 +48,7 @@ export class SearchPageComponent {
     private readonly searchService: SearchService
   ) {
     this.searchTerm = this.activatedRoute.snapshot.queryParams['searchTerm'];
+    this.pageNumber = this.activatedRoute.snapshot.queryParams['pageNumber'] || 1;
     this.initializeForm();
     this.executeSearch();
   }
@@ -62,7 +67,7 @@ export class SearchPageComponent {
 
     const searchParams: SearchParams = {
       intitle: this.searchTerm,
-      page: 1
+      page: this.pageNumber
     };
 
     this.isLoading = true;
@@ -88,7 +93,8 @@ export class SearchPageComponent {
   private async saveSearchTermInQueryParams(): Promise<void> {
     await this.router.navigate([], {
       queryParams: {
-        searchTerm: this.searchTerm
+        searchTerm: this.searchTerm,
+        pageNumber: this.pageNumber
       },
       queryParamsHandling: 'merge'
     });

@@ -1,1 +1,20 @@
-<p>pagination works!</p>
+<div class="pagination">
+  <span
+    class="pagination__button"
+    [class.pagination__button--disabled]="isPreviousDisabled"
+  >
+    <i class="fa-solid fa-chevron-left"></i>
+    Previous page
+  </span>
+  <span class="pagination__number">
+    {{ pageNumber }}
+  </span>
+  <span
+    class="pagination__button"
+    [class.pagination__button--disabled]="isPreviousDisabled"
+  >
+    Next page
+    <i class="fa-solid fa-chevron-right"></i>
+  </span>
+</div>
+

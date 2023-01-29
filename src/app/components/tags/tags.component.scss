@@ -5,7 +5,7 @@
 }
 
 .tags {
-  @include flex($align-items: start, $justify-content: start);
+  @include flex($align-items: flex-start, $justify-content: flex-start);
 }
 
 .tags_item {

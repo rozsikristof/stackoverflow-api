@@ -17,7 +17,7 @@ export class FormatError implements PipeTransform {
     const time = +value.substring(timerStartIndex, timerEndIndex);
 
     const hour = this.convertToTwoDigits(Math.floor(time / SEC_TO_HOUR).toString());
-    const minute = this.convertToTwoDigits(Math.floor(time / SEC_TO_MINUTE).toString());
+    const minute = this.convertToTwoDigits(Math.floor(time % SEC_TO_HOUR / SEC_TO_MINUTE).toString());
     const second = this.convertToTwoDigits((time % SEC_TO_MINUTE).toString());
 
     return `${value.substring(0, timerStartIndex)} ${hour}:${minute}:${second}`;

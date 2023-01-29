@@ -10,7 +10,7 @@
 
 <h2>Search Results</h2>
 <h3
-  *ngIf="!isLoading"
+  *ngIf="!isLoading && (searchResult$ | async) !== null"
   class="search_results-text"
 >
   Results for '{{ searchTerm }}'
@@ -19,11 +19,17 @@
 <p *ngIf="searchHasParsingError$ | async" class="search__error parse-error">
   Some text might be poorly rendered due to parsing error!
 </p>
+
+<app-pagination
+  *ngIf="!isLoading && (searchResult$ | async)?.length"
+  [pageNumber]="pageNumber"
+></app-pagination>
 <ul *ngIf="(searchResult$ | async)?.length" class="search__answer-wrapper">
   <ng-container *ngFor="let searchItem of (searchResult$ | async)">
     <app-search-result-item [searchItem]="searchItem"></app-search-result-item>
   </ng-container>
 </ul>
+
 <p *ngIf="(searchResult$ | async)?.length === 0 && !isLoading" class="search__no-result">
   No results :(
 </p>
