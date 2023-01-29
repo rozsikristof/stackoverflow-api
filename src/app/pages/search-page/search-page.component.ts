@@ -10,13 +10,16 @@ import { ErrorResponse } from 'src/app/common/interfaces/error-response.interfac
 import { AxiosError } from 'axios';
 import { FormatError } from 'src/app/common/pipes/format-error';
 import { LoadingComponent } from 'src/app/components/common/loading/loading.component';
+import { AbstractControl, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const importedComponents = [
   CommonModule,
   InputFieldComponent,
   SearchResultItemComponent,
   FormatError,
-  LoadingComponent
+  LoadingComponent,
+  ReactiveFormsModule,
+  FormsModule
 ];
 
 @Component({
@@ -33,6 +36,7 @@ export class SearchPageComponent {
   searchResultsError$ = new BehaviorSubject<ErrorResponse | null>(null);
   searchHasParsingError$ = new BehaviorSubject<boolean>(false);
   isLoading = false;
+  searchFormGroup: FormGroup = {} as FormGroup;
 
   constructor(
     private readonly router: Router,
@@ -40,22 +44,21 @@ export class SearchPageComponent {
     private readonly searchService: SearchService
   ) {
     this.searchTerm = this.activatedRoute.snapshot.queryParams['searchTerm'];
+    this.initializeForm();
     this.executeSearch();
   }
 
-  async receiveInputValue(inputValue: string): Promise<void> {
-    this.searchTerm = inputValue;
-
-    await this.saveSearchTermInQueryParams();
-    await this.executeSearch();
-  }
-
-  private async executeSearch(): Promise<void> {
+  async executeSearch(): Promise<void> {
     this.initializeData();
 
+    this.searchTerm = this.getFormControl('searchTerm').value;
+
     if (!this.searchTerm) {
+      this.searchResult$.next(null);
       return;
     }
+
+    await this.saveSearchTermInQueryParams();
 
     const searchParams: SearchParams = {
       intitle: this.searchTerm,
@@ -78,6 +81,10 @@ export class SearchPageComponent {
     this.isLoading = false;
   }
 
+  private getFormControl(controlName: string): AbstractControl {
+    return this.searchFormGroup.get(controlName);
+  }
+
   private async saveSearchTermInQueryParams(): Promise<void> {
     await this.router.navigate([], {
       queryParams: {
@@ -91,5 +98,13 @@ export class SearchPageComponent {
     this.searchResult$.next([]);
     this.searchResultsError$.next(null);
     this.searchHasParsingError$.next(false);
+  }
+
+  private initializeForm(): void {
+    this.searchFormGroup = new FormGroup(
+      {
+        searchTerm: new FormControl(this.searchTerm)
+      }
+    );
   }
 }

@@ -26,8 +26,8 @@
     <div class="search-result__user">
       <img class="search-result__user-avatar" [src]="searchItem.owner.profile_image" />
       <span class="search-result__user-name">
-        {{ searchItem.owner.display_name }} asked
-        <span>{{ searchItem.creation_date }}</span>
+        {{ searchItem.owner.display_name }}
+        <span class="search-result__date"> asked {{ searchItem.creation_date }}</span>
       </span>
     </div>
   </div>

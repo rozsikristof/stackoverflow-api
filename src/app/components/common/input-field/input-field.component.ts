@@ -1,12 +1,14 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { AbstractControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxTrimDirectiveModule } from 'ngx-trim-directive';
+import { OnInit } from '@angular/core';
 
 const importedComponents = [
   CommonModule,
   FormsModule,
-  NgxTrimDirectiveModule
+  NgxTrimDirectiveModule,
+  ReactiveFormsModule
 ];
 
 @Component({
@@ -17,16 +19,16 @@ const importedComponents = [
   styleUrls: ['./input-field.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class InputFieldComponent {
+export class InputFieldComponent implements OnInit {
   @Input() placeholder = '';
-  @Output() userEventResult = new EventEmitter<string>();
-  @Input() set initValue(value: string) {
-    this.inputValue = value;
-  }
+  @Input() group: FormGroup = {} as FormGroup;
+  @Input() controlName = '';
 
-  inputValue = '';
+  formControl: AbstractControl = {} as AbstractControl;
 
-  userEvent(): void {
-    this.userEventResult.emit(this.inputValue);
+  ngOnInit(): void {
+    if (this.group && this.controlName) {
+      this.formControl = this.group?.get(this.controlName);
+    }
   }
 }

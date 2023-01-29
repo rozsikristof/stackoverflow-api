@@ -1,11 +1,20 @@
-<app-input-field
-  class="search__input"
-  placeholder="Search for a topic on Stackoverflow..."
-  [initValue]="searchTerm"
-  (userEventResult)="receiveInputValue($event)"
-></app-input-field>
+<form (ngSubmit)="executeSearch()">
+  <app-input-field
+    class="search__input"
+    placeholder="Search for a topic on Stackoverflow..."
+    controlName="searchTerm"
+    [group]="searchFormGroup"
+  ></app-input-field>
+  <button class="search__sumbit-button" type="submit">Search</button>
+</form>
 
 <h2>Search Results</h2>
+<h3
+  *ngIf="!isLoading"
+  class="search_results-text"
+>
+  Results for '{{ searchTerm }}'
+</h3>
 
 <p *ngIf="searchHasParsingError$ | async" class="search__error parse-error">
   Some text might be poorly rendered due to parsing error!
@@ -19,7 +28,7 @@
   No results :(
 </p>
 <p *ngIf="(searchResult$ | async) === null" class="search__no-result">
-  Eneter a keyword and press Enter to start searching! :)
+  Eneter a keyword and start searching! :)
 </p>
 <p *ngIf="searchResultsError$ | async" class="search__error">
   {{ (searchResultsError$ | async).error_message | formatError }}
