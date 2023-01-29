@@ -6,11 +6,17 @@ import { SearchService } from 'src/app/api/search.service';
 import { SearchParams, SearchResultItem } from 'src/app/common/interfaces/search-api.interface';
 import { SearchResultItemComponent } from 'src/app/components/search-result-item/search-result-item.component';
 import { BehaviorSubject } from 'rxjs';
+import { ErrorResponse } from 'src/app/common/interfaces/error-response.interface';
+import { AxiosError } from 'axios';
+import { FormatError } from 'src/app/common/pipes/format-error';
+import { LoadingComponent } from 'src/app/components/common/loading/loading.component';
 
 const importedComponents = [
   CommonModule,
   InputFieldComponent,
-  SearchResultItemComponent
+  SearchResultItemComponent,
+  FormatError,
+  LoadingComponent
 ];
 
 @Component({
@@ -24,6 +30,9 @@ const importedComponents = [
 export class SearchPageComponent {
   searchTerm = '';
   searchResult$ = new BehaviorSubject<SearchResultItem[] | null>(null);
+  searchResultsError$ = new BehaviorSubject<ErrorResponse | null>(null);
+  searchHasParsingError$ = new BehaviorSubject<boolean>(false);
+  isLoading = false;
 
   constructor(
     private readonly router: Router,
@@ -44,6 +53,7 @@ export class SearchPageComponent {
   private async executeSearch(): Promise<void> {
     if (!this.searchTerm) {
       this.searchResult$.next([]);
+      this.isLoading = false;
       return;
     }
 
@@ -51,8 +61,17 @@ export class SearchPageComponent {
       intitle: this.searchTerm
     };
 
-    const result = await this.searchService.search(searchParams);
-    this.searchResult$.next(result.items);
+    this.isLoading = true;
+
+    await this.searchService.search(searchParams).then(result => {
+      this.searchHasParsingError$.next(result.parse_error);
+      this.searchResult$.next(result.items);
+      this.searchResultsError$.next(null);
+    }).catch((error: AxiosError) => {
+      this.searchResultsError$.next(error.response?.data as ErrorResponse);
+    });
+
+    this.isLoading = false;
   }
 
   private async saveSearchTermInQueryParams(): Promise<void> {

@@ -43,7 +43,9 @@
         "eqeqeq": "error",
         "no-else-return": "warn",
         "no-inline-comments": "warn",
-        "no-magic-numbers": "warn",
+        "no-magic-numbers": ["warn", {
+          "ignore": [0, 1]
+        }],
         "prefer-const": "warn",
         "max-len": [
           "warn",

@@ -1,0 +1,819 @@
+{
+  "data": {
+    "items": [
+        {
+            "tags": [
+                "javascript",
+                "angular",
+                "angularjs",
+                "typescript"
+            ],
+            "owner": {
+                "account_id": 27649791,
+                "reputation": 1,
+                "user_id": 21104960,
+                "user_type": "registered",
+                "profile_image": "https://lh3.googleusercontent.com/a/AEdFTp5EEz-O7752OlZFPE8eeaRnhmJkOjpjPHNr9A6Z=k-s256",
+                "display_name": "Ghost",
+                "link": "https://stackoverflow.com/users/21104960/ghost"
+            },
+            "is_answered": false,
+            "view_count": 6,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1675003722,
+            "creation_date": 1675003722,
+            "question_id": 75275790,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75275790/angular-sync-2-input-fields-like-in-google-translate",
+            "title": "Angular Sync 2 input fields like in google translate"
+        },
+        {
+            "tags": [
+                "angular"
+            ],
+            "owner": {
+                "account_id": 2796408,
+                "reputation": 924,
+                "user_id": 2405566,
+                "user_type": "registered",
+                "profile_image": "https://i.stack.imgur.com/jlYb8.jpg?s=256&g=1",
+                "display_name": "David J",
+                "link": "https://stackoverflow.com/users/2405566/david-j"
+            },
+            "is_answered": false,
+            "view_count": 7,
+            "answer_count": 1,
+            "score": 0,
+            "last_activity_date": 1675003433,
+            "creation_date": 1675001716,
+            "question_id": 75275566,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75275566/module-angular-common-has-no-exported-member-ngoptimizedimage-3-import",
+            "title": "Module &#39;&quot;@angular/common&quot;&#39; has no exported member &#39;NgOptimizedImage&#39;. 3 import { NgOptimizedImage} from &#39;@angular/common&#39;;"
+        },
+        {
+            "tags": [
+                "angular",
+                "froala"
+            ],
+            "owner": {
+                "account_id": 1745672,
+                "reputation": 93,
+                "user_id": 1595971,
+                "user_type": "registered",
+                "accept_rate": 50,
+                "profile_image": "https://www.gravatar.com/avatar/881d80aac87494b9a94d3097818d4db3?s=256&d=identicon&r=PG",
+                "display_name": "kishdude",
+                "link": "https://stackoverflow.com/users/1595971/kishdude"
+            },
+            "is_answered": true,
+            "view_count": 808,
+            "answer_count": 2,
+            "score": 1,
+            "last_activity_date": 1675003089,
+            "creation_date": 1612538042,
+            "question_id": 66065788,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/66065788/how-do-i-get-access-to-the-editor-in-froala-editor-in-angular-11",
+            "title": "How do I get access to the editor in froala editor in angular 11?"
+        },
+        {
+            "tags": [
+                "javascript",
+                "angular"
+            ],
+            "owner": {
+                "account_id": 10591397,
+                "reputation": 1,
+                "user_id": 7813249,
+                "user_type": "registered",
+                "profile_image": "https://graph.facebook.com/1344077855676093/picture?type=large",
+                "display_name": "Robinson Batista da Silva",
+                "link": "https://stackoverflow.com/users/7813249/robinson-batista-da-silva"
+            },
+            "is_answered": false,
+            "view_count": 9,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1675002819,
+            "creation_date": 1675002819,
+            "question_id": 75275699,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75275699/angular-remove-locationstrategy-onpopstate-call-back",
+            "title": "Angular - remove LocationStrategy onPopState call back"
+        },
+        {
+            "tags": [
+                "angular",
+                "jasmine"
+            ],
+            "owner": {
+                "account_id": 27649583,
+                "reputation": 1,
+                "user_id": 21104792,
+                "user_type": "registered",
+                "profile_image": "https://lh3.googleusercontent.com/a/AEdFTp4AYFleU87GZ2qoddZvQ5CVEERMRYEAI5nC16ts=k-s256",
+                "display_name": "demon123",
+                "link": "https://stackoverflow.com/users/21104792/demon123"
+            },
+            "is_answered": false,
+            "view_count": 16,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1675001510,
+            "creation_date": 1675001145,
+            "last_edit_date": 1675001510,
+            "question_id": 75275507,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75275507/angular-test-for-child-window-close",
+            "title": "Angular test for child window close"
+        },
+        {
+            "tags": [
+                "angular",
+                "docker",
+                "nginx",
+                "angular-ui-router"
+            ],
+            "owner": {
+                "account_id": 14739293,
+                "reputation": 610,
+                "user_id": 10644324,
+                "user_type": "registered",
+                "profile_image": "https://lh3.googleusercontent.com/-t1GOaH40wJ8/AAAAAAAAAAI/AAAAAAAAAAg/aJd24DNKe5E/photo.jpg?sz=256",
+                "display_name": "Yash Soni",
+                "link": "https://stackoverflow.com/users/10644324/yash-soni"
+            },
+            "is_answered": false,
+            "view_count": 18,
+            "answer_count": 1,
+            "score": 1,
+            "last_activity_date": 1675001398,
+            "creation_date": 1674999223,
+            "question_id": 75275291,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75275291/angular-home-page-component-routing-issue",
+            "title": "Angular Home Page Component routing issue"
+        },
+        {
+            "tags": [
+                "angular",
+                "heroku",
+                "cpanel",
+                "angular-universal"
+            ],
+            "owner": {
+                "account_id": 14501746,
+                "reputation": 11,
+                "user_id": 10474717,
+                "user_type": "registered",
+                "profile_image": "https://lh6.googleusercontent.com/-OLSn6udbxUs/AAAAAAAAAAI/AAAAAAAAAkQ/G-UWu_7CdMQ/photo.jpg?sz=256",
+                "display_name": "Faris Švrakić",
+                "link": "https://stackoverflow.com/users/10474717/faris-%c5%a0vraki%c4%87"
+            },
+            "is_answered": false,
+            "view_count": 21,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1675001084,
+            "creation_date": 1674832270,
+            "last_edit_date": 1675001084,
+            "question_id": 75259964,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75259964/angular-universal-on-node-js-api-on-heroku-connection-error-status-code-0-unk",
+            "title": "Angular Universal on Node.js + API on Heroku connection error status code 0, unknown error"
+        },
+        {
+            "tags": [
+                "angular",
+                "express",
+                "angular-universal"
+            ],
+            "owner": {
+                "account_id": 3908744,
+                "reputation": 5340,
+                "user_id": 3234665,
+                "user_type": "registered",
+                "accept_rate": 42,
+                "profile_image": "https://i.stack.imgur.com/uBLBw.jpg?s=256&g=1",
+                "display_name": "Jeeten Parmar",
+                "link": "https://stackoverflow.com/users/3234665/jeeten-parmar"
+            },
+            "is_answered": false,
+            "view_count": 9,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1674999696,
+            "creation_date": 1674999696,
+            "question_id": 75275354,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75275354/angular-universal-server-folder-is-not-being-generated",
+            "title": "Angular Universal: Server folder is not being generated"
+        },
+        {
+            "tags": [
+                "mysql",
+                "angular",
+                "file-upload",
+                "nodejs-server"
+            ],
+            "owner": {
+                "account_id": 17069401,
+                "reputation": 79,
+                "user_id": 12350594,
+                "user_type": "registered",
+                "profile_image": "https://lh6.googleusercontent.com/-79udzQ4yDbs/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rdm2VB7FEb5dSSr6qqVVoKzUCr5Zg/photo.jpg?sz=256",
+                "display_name": "Ahmed Meshaal",
+                "link": "https://stackoverflow.com/users/12350594/ahmed-meshaal"
+            },
+            "is_answered": false,
+            "view_count": 12,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1674999309,
+            "creation_date": 1674999309,
+            "question_id": 75275305,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75275305/nodejs-angular-upload-file-to-server-not-found-404",
+            "title": "Nodejs - Angular Upload File to server Not found 404"
+        },
+        {
+            "tags": [
+                "angular",
+                "typescript"
+            ],
+            "owner": {
+                "account_id": 18242484,
+                "reputation": 89,
+                "user_id": 13279278,
+                "user_type": "registered",
+                "profile_image": "https://graph.facebook.com/3140787295954146/picture?type=large",
+                "display_name": "Eugen G&#238;rlescu",
+                "link": "https://stackoverflow.com/users/13279278/eugen-g%c3%aerlescu"
+            },
+            "is_answered": false,
+            "view_count": 33,
+            "answer_count": 2,
+            "score": 0,
+            "last_activity_date": 1674998538,
+            "creation_date": 1674831697,
+            "last_edit_date": 1674842811,
+            "question_id": 75259876,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75259876/enable-disable-button-in-angular-when-i-modify-form",
+            "title": "Enable/Disable Button in angular when I modify form"
+        },
+        {
+            "tags": [
+                "angular",
+                "asp.net-core"
+            ],
+            "owner": {
+                "account_id": 14885446,
+                "reputation": 11,
+                "user_id": 10748755,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/d65a21c72ab771e4b147191d0bfcd343?s=256&d=identicon&r=PG&f=1",
+                "display_name": "Rashid     Minhas",
+                "link": "https://stackoverflow.com/users/10748755/rashid-minhas"
+            },
+            "is_answered": false,
+            "view_count": 35,
+            "closed_date": 1674998218,
+            "answer_count": 1,
+            "score": 0,
+            "last_activity_date": 1674997985,
+            "creation_date": 1674990495,
+            "last_edit_date": 1674997985,
+            "question_id": 75274388,
+            "link": "https://stackoverflow.com/questions/75274388/should-we-use-angular-with-asp-net-core-or-not-as-asp-net-core-is-full-stack-fr",
+            "closed_reason": "Opinion-based",
+            "title": "Should we use Angular with ASP.NET Core or not, as ASP.NET Core is full stack framework"
+        },
+        {
+            "tags": [
+                "angular",
+                "typescript"
+            ],
+            "owner": {
+                "account_id": 22795979,
+                "reputation": 21,
+                "user_id": 16949532,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/f980b624fc26e2d01fa78c5456497425?s=256&d=identicon&r=PG&f=1",
+                "display_name": "coopernator",
+                "link": "https://stackoverflow.com/users/16949532/coopernator"
+            },
+            "is_answered": false,
+            "view_count": 24,
+            "answer_count": 1,
+            "score": 2,
+            "last_activity_date": 1674997796,
+            "creation_date": 1674988460,
+            "question_id": 75274212,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75274212/implementing-a-standard-layout-for-reusable-components-in-angular",
+            "title": "Implementing a standard layout for reusable components in Angular"
+        },
+        {
+            "tags": [
+                "angular",
+                "state"
+            ],
+            "owner": {
+                "account_id": 27636286,
+                "reputation": 1,
+                "user_id": 21094144,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/7f745ff099ed166c6b98b21285856919?s=256&d=identicon&r=PG",
+                "display_name": "test",
+                "link": "https://stackoverflow.com/users/21094144/test"
+            },
+            "is_answered": false,
+            "view_count": 14,
+            "answer_count": 1,
+            "score": 0,
+            "last_activity_date": 1674996836,
+            "creation_date": 1674986332,
+            "question_id": 75274036,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75274036/how-do-i-get-actionsobserver-value-from-angular-state",
+            "title": "How do I get actionsObserver value from angular state"
+        },
+        {
+            "tags": [
+                "angular",
+                "angular5"
+            ],
+            "owner": {
+                "account_id": 3538071,
+                "reputation": 658,
+                "user_id": 2955866,
+                "user_type": "registered",
+                "accept_rate": 17,
+                "profile_image": "https://www.gravatar.com/avatar/?s=256&d=identicon&r=PG&f=1",
+                "display_name": "Aijaz",
+                "link": "https://stackoverflow.com/users/2955866/aijaz"
+            },
+            "is_answered": false,
+            "view_count": 996,
+            "answer_count": 3,
+            "score": 0,
+            "last_activity_date": 1674996460,
+            "creation_date": 1517887978,
+            "last_edit_date": 1517890226,
+            "question_id": 48635045,
+            "content_license": "CC BY-SA 3.0",
+            "link": "https://stackoverflow.com/questions/48635045/access-control-allow-origin-angular-5-http-binance",
+            "title": "Access-Control-Allow-Origin, Angular 5, HTTP Binance"
+        },
+        {
+            "tags": [
+                "angular",
+                "typescript"
+            ],
+            "owner": {
+                "account_id": 7551037,
+                "reputation": 119,
+                "user_id": 5732444,
+                "user_type": "registered",
+                "accept_rate": 8,
+                "profile_image": "https://www.gravatar.com/avatar/2e0aec5798e35fd0570299f05a400573?s=256&d=identicon&r=PG&f=1",
+                "display_name": "Marcos Galaviz",
+                "link": "https://stackoverflow.com/users/5732444/marcos-galaviz"
+            },
+            "is_answered": false,
+            "view_count": 31,
+            "answer_count": 1,
+            "score": -1,
+            "last_activity_date": 1674993479,
+            "creation_date": 1674928865,
+            "last_edit_date": 1674929084,
+            "question_id": 75269743,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75269743/test-angular-service",
+            "title": "Test Angular service"
+        },
+        {
+            "tags": [
+                "node.js",
+                "angular",
+                "npm",
+                "windows-10"
+            ],
+            "owner": {
+                "account_id": 11613759,
+                "reputation": 83,
+                "user_id": 8507236,
+                "user_type": "registered",
+                "accept_rate": 78,
+                "profile_image": "https://www.gravatar.com/avatar/c31b9e8ece49a06ec4f8b47c3dcce293?s=256&d=identicon&r=PG&f=1",
+                "display_name": "Gbenga",
+                "link": "https://stackoverflow.com/users/8507236/gbenga"
+            },
+            "is_answered": true,
+            "view_count": 8953,
+            "accepted_answer_id": 71449568,
+            "answer_count": 2,
+            "score": 0,
+            "last_activity_date": 1674993114,
+            "creation_date": 1647084101,
+            "question_id": 71449279,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/71449279/how-to-resolve-npm-err-code-econnreset-while-installing-angular-cli",
+            "title": "How to resolve npm ERR! code ECONNRESET while installing Angular cli"
+        },
+        {
+            "tags": [
+                "javascript",
+                "angular",
+                "angular8",
+                "ag-grid",
+                "ag-grid-angular"
+            ],
+            "owner": {
+                "account_id": 22369491,
+                "reputation": 23,
+                "user_id": 16584757,
+                "user_type": "registered",
+                "profile_image": "https://lh3.googleusercontent.com/a/AATXAJx3HXjlIGhjC3tneAK98TtWoYulfHHr2psCN4em=k-s256",
+                "display_name": "RevanthReddySince1998",
+                "link": "https://stackoverflow.com/users/16584757/revanthreddysince1998"
+            },
+            "is_answered": false,
+            "view_count": 21,
+            "answer_count": 1,
+            "score": 0,
+            "last_activity_date": 1674991320,
+            "creation_date": 1672896238,
+            "question_id": 75014157,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75014157/ag-grid-row-drag-property-is-not-working-in-angular-component",
+            "title": "Ag-grid row drag property is not working in angular component"
+        },
+        {
+            "tags": [
+                "javascript",
+                "angular",
+                "angularjs",
+                "typescript"
+            ],
+            "owner": {
+                "account_id": 27637696,
+                "reputation": 29,
+                "user_id": 21095303,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/2092c0303416cd3dbb2d5ce8f69df9a3?s=256&d=identicon&r=PG",
+                "display_name": "Thoudy95",
+                "link": "https://stackoverflow.com/users/21095303/thoudy95"
+            },
+            "is_answered": false,
+            "view_count": 18,
+            "answer_count": 1,
+            "score": 1,
+            "last_activity_date": 1674989886,
+            "creation_date": 1674989349,
+            "question_id": 75274283,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75274283/angular-issue-with-interpolation-and-also-implementing-elements",
+            "title": "Angular issue with Interpolation and also implementing elements"
+        },
+        {
+            "tags": [
+                "angular",
+                "image-resizing",
+                "absolute",
+                "aspect-ratio",
+                "splitter"
+            ],
+            "owner": {
+                "account_id": 23784716,
+                "reputation": 1,
+                "user_id": 17796965,
+                "user_type": "registered",
+                "profile_image": "https://i.stack.imgur.com/GItSj.jpg?s=256&g=1",
+                "display_name": "EladC",
+                "link": "https://stackoverflow.com/users/17796965/eladc"
+            },
+            "is_answered": false,
+            "view_count": 9,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1674987888,
+            "creation_date": 1674987888,
+            "question_id": 75274160,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75274160/items-that-are-absolute-on-a-div-are-jumping-when-resizing-the-div-with-a-splitt",
+            "title": "Items that are absolute on a div are jumping when resizing the div with a splitter bar (while keeping the aspect ratio) - Angular"
+        },
+        {
+            "tags": [
+                "angular",
+                "unit-testing",
+                "karma-jasmine",
+                "angular-test"
+            ],
+            "owner": {
+                "account_id": 27350288,
+                "reputation": 1,
+                "user_id": 20859571,
+                "user_type": "registered",
+                "profile_image": "https://lh3.googleusercontent.com/a/AEdFTp5-i17TWcZG70kzWU1tv2uQnZEQsX7eA_az9BLZ=k-s256",
+                "display_name": "Alen Aju",
+                "link": "https://stackoverflow.com/users/20859571/alen-aju"
+            },
+            "is_answered": false,
+            "view_count": 13,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1674986894,
+            "creation_date": 1674986392,
+            "last_edit_date": 1674986894,
+            "question_id": 75274042,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75274042/access-ng-zorro-elements-nz-tree-for-angular-testing-jasmine-and-karma",
+            "title": "Access ng zorro elements (nz-tree) for angular testing (Jasmine and Karma)"
+        },
+        {
+            "tags": [
+                "dependency-injection",
+                "lazy-loading",
+                "angular12"
+            ],
+            "owner": {
+                "account_id": 22297476,
+                "reputation": 3,
+                "user_id": 17180972,
+                "user_type": "registered",
+                "profile_image": "https://lh3.googleusercontent.com/a/AATXAJzIutSVxD8aoIbiNEFulY0D5StuhV407Q0ux5_T=k-s256",
+                "display_name": "Marco Antonio Gallardo",
+                "link": "https://stackoverflow.com/users/17180972/marco-antonio-gallardo"
+            },
+            "is_answered": false,
+            "view_count": 37,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1674986767,
+            "creation_date": 1674305828,
+            "last_edit_date": 1674986767,
+            "question_id": 75193494,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75193494/angular-12-inject-service-via-forroot-into-an-external-library-loaded-from-a-m",
+            "title": "Angular 12. Inject service via forRoot into an external library, loaded from a module which has been lazy loaded by Compiler"
+        },
+        {
+            "tags": [
+                "typescript",
+                "angular",
+                "production",
+                "systemjs"
+            ],
+            "owner": {
+                "account_id": 1442772,
+                "reputation": 3015,
+                "user_id": 1362355,
+                "user_type": "registered",
+                "accept_rate": 29,
+                "profile_image": "https://www.gravatar.com/avatar/3376d6d84d828644f5b2f2a55cae9399?s=256&d=identicon&r=PG",
+                "display_name": "Joseph Girgis",
+                "link": "https://stackoverflow.com/users/1362355/joseph-girgis"
+            },
+            "is_answered": true,
+            "view_count": 215812,
+            "accepted_answer_id": 35563542,
+            "answer_count": 19,
+            "score": 219,
+            "last_activity_date": 1674985495,
+            "creation_date": 1456076854,
+            "last_edit_date": 1513803168,
+            "question_id": 35539622,
+            "content_license": "CC BY-SA 3.0",
+            "link": "https://stackoverflow.com/questions/35539622/how-do-you-deploy-angular-apps",
+            "title": "How do you deploy Angular apps?"
+        },
+        {
+            "tags": [
+                "angular",
+                "amazon-s3",
+                "angular8",
+                "amazon-cloudfront",
+                "angular9"
+            ],
+            "owner": {
+                "account_id": 1153647,
+                "reputation": 423,
+                "user_id": 1134835,
+                "user_type": "registered",
+                "accept_rate": 40,
+                "profile_image": "https://www.gravatar.com/avatar/abf20b52dcccf512036d76159172f905?s=256&d=identicon&r=PG",
+                "display_name": "Mohit224",
+                "link": "https://stackoverflow.com/users/1134835/mohit224"
+            },
+            "is_answered": true,
+            "view_count": 2434,
+            "answer_count": 4,
+            "score": 6,
+            "last_activity_date": 1674985323,
+            "creation_date": 1601071880,
+            "question_id": 64071886,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/64071886/angular-9-failed-to-load-module-script-using-aws-s3-and-cloudfront",
+            "title": "Angular 9 Failed to load module script using AWS S3 and Cloudfront"
+        },
+        {
+            "tags": [
+                "docker"
+            ],
+            "owner": {
+                "account_id": 8168052,
+                "reputation": 11,
+                "user_id": 6149605,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/ac471c589873c40588c1a05f5bdaebc1?s=256&d=identicon&r=PG&f=1",
+                "display_name": "arturocasado",
+                "link": "https://stackoverflow.com/users/6149605/arturocasado"
+            },
+            "is_answered": false,
+            "view_count": 544,
+            "answer_count": 2,
+            "score": 1,
+            "last_activity_date": 1674983083,
+            "creation_date": 1607359890,
+            "last_edit_date": 1607429045,
+            "question_id": 65185938,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/65185938/angular-11-aplication-and-net-core-3-1-containerized-in-docker",
+            "title": "Angular 11 aplication and .NET core 3.1 containerized in Docker"
+        },
+        {
+            "tags": [
+                "html",
+                "angular",
+                "pipe",
+                "ngx-translate",
+                "angular14"
+            ],
+            "owner": {
+                "account_id": 13146926,
+                "reputation": 1,
+                "user_id": 9496699,
+                "user_type": "registered",
+                "profile_image": "https://i.stack.imgur.com/GiATG.png?s=256&g=1",
+                "display_name": "Mohamde amine Karek",
+                "link": "https://stackoverflow.com/users/9496699/mohamde-amine-karek"
+            },
+            "is_answered": false,
+            "view_count": 21,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1674980826,
+            "creation_date": 1674980826,
+            "question_id": 75273540,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75273540/translate-service-does-not-apply-to-all-components-in-my-angular-14-application",
+            "title": "Translate service does not apply to all components in my angular 14 application"
+        },
+        {
+            "tags": [
+                "html",
+                "angular"
+            ],
+            "owner": {
+                "account_id": 6661478,
+                "reputation": 1382,
+                "user_id": 5140436,
+                "user_type": "registered",
+                "accept_rate": 88,
+                "profile_image": "https://i.stack.imgur.com/tWJPw.jpg?s=256&g=1",
+                "display_name": "Akshay",
+                "link": "https://stackoverflow.com/users/5140436/akshay"
+            },
+            "is_answered": false,
+            "view_count": 7679,
+            "answer_count": 1,
+            "score": 4,
+            "last_activity_date": 1674979215,
+            "creation_date": 1505210221,
+            "last_edit_date": 1618043978,
+            "question_id": 46173373,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/46173373/angular-4-app-component-html-content-is-not-displaying",
+            "title": "angular 4 | app.component.html content is not displaying"
+        },
+        {
+            "tags": [
+                "node.js",
+                "angular",
+                "typescript",
+                "filter",
+                "angular2-ngmodel"
+            ],
+            "owner": {
+                "account_id": 22068340,
+                "reputation": 1,
+                "user_id": 16329790,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/4f501b57d71f81958532678bc5f964a7?s=256&d=identicon&r=PG&f=1",
+                "display_name": "ser911",
+                "link": "https://stackoverflow.com/users/16329790/ser911"
+            },
+            "is_answered": false,
+            "view_count": 139,
+            "answer_count": 2,
+            "score": 0,
+            "last_activity_date": 1674977071,
+            "creation_date": 1642496501,
+            "last_edit_date": 1642498841,
+            "question_id": 70752836,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/70752836/i-have-been-having-issues-in-implementing-a-filter-of-item-categories-in-an-ecom",
+            "title": "I have been having issues in implementing a filter of item categories in an ecommerce being built using NodeJs and Angular"
+        },
+        {
+            "tags": [
+                "javascript",
+                "angular",
+                "typescript",
+                "angular-ui-router"
+            ],
+            "owner": {
+                "account_id": 27498815,
+                "reputation": 1,
+                "user_id": 20982913,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/d1f8c988c45865c0ffd6e8526eb0dda5?s=256&d=identicon&r=PG",
+                "display_name": "DanielPan",
+                "link": "https://stackoverflow.com/users/20982913/danielpan"
+            },
+            "is_answered": false,
+            "view_count": 12,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1674975587,
+            "creation_date": 1674975587,
+            "question_id": 75273125,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75273125/enter-different-detail-components-according-to-the-different-data-of-the-selecte",
+            "title": "Enter different detail components according to the different data of the selected row in Angular"
+        },
+        {
+            "tags": [
+                "angular",
+                "jasmine"
+            ],
+            "owner": {
+                "account_id": 27636286,
+                "reputation": 1,
+                "user_id": 21094144,
+                "user_type": "registered",
+                "profile_image": "https://www.gravatar.com/avatar/7f745ff099ed166c6b98b21285856919?s=256&d=identicon&r=PG",
+                "display_name": "test",
+                "link": "https://stackoverflow.com/users/21094144/test"
+            },
+            "is_answered": false,
+            "view_count": 24,
+            "answer_count": 0,
+            "score": 0,
+            "last_activity_date": 1674972634,
+            "creation_date": 1674972028,
+            "last_edit_date": 1674972634,
+            "question_id": 75272895,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75272895/if-app-user-is-an-angular-component-and-it-has-loading-input-then-verify-th",
+            "title": "If &#39;app-user&#39; is an Angular component and it has &#39;loading&#39; input, then verify that it is part of this module"
+        },
+        {
+            "tags": [
+                "node.js",
+                "angular",
+                "express",
+                "routes"
+            ],
+            "owner": {
+                "account_id": 64847,
+                "reputation": 2724,
+                "user_id": 191220,
+                "user_type": "registered",
+                "accept_rate": 62,
+                "profile_image": "https://i.stack.imgur.com/y48t1.jpg?s=256&g=1",
+                "display_name": "Mironline",
+                "link": "https://stackoverflow.com/users/191220/mironline"
+            },
+            "is_answered": false,
+            "view_count": 13,
+            "answer_count": 0,
+            "score": 1,
+            "last_activity_date": 1674971187,
+            "creation_date": 1674971187,
+            "question_id": 75272848,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/75272848/combining-express-route-and-frontend-route-angular",
+            "title": "Combining express route and frontend route (Angular)"
+        }
+    ],
+    "has_more": true,
+    "quota_max": 300,
+    "quota_remaining": 261
+  }
+}

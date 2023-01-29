@@ -40,4 +40,5 @@ export interface SearchResults {
   has_more: boolean;
   quota_max: number;
   quota_remaning: number;
+  parse_error: boolean;
 }

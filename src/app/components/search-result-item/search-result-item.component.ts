@@ -12,4 +12,8 @@ import { SearchResultItem } from 'src/app/common/interfaces/search-api.interface
 })
 export class SearchResultItemComponent {
   @Input() searchItem: SearchResultItem = {} as SearchResultItem;
+
+  openQuestionInNewTab(): void {
+    window.open(this.searchItem.link, '_blank');
+  }
 }

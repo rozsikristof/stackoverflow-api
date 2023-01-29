@@ -1,16 +1,57 @@
+@import 'variables';
+
 .search-result {
   width: 700px;
   display: flex;
-  height: 120px;
+  height: 140px;
   border: 1px solid black;
   margin-bottom: 10px;
-  padding: 15px 30px;
+  padding: 20px 10px;
+  box-shadow: $simple-box-shadow;
+  background-color: #d4d4d4;
+  border-radius: 10px;
+  transition: .1s;
+
+  &:hover {
+    background-color: #abaaa9;
+    border-color: white;
+  }
 }
 
 .search-result__number-details {
+  flex: 1;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-end;
   margin-right: 15px;
+  font-weight: 600;
+}
+
+.search-result__text-details {
+  flex: 4;
+}
+
+.search-result__title {
+  margin: 0;
+  font-size: 16px;
+  color: #1f5180;
+  cursor: pointer;
+}
+
+.fa-up-right-from-square {
+  margin-left: 3px;
+}
+
+.search-result__answer {
+  border: 1px solid green;
+  border-radius: 5px;
+  padding: 5px 8px;
+  width: fit-content;
+}
+
+.search-result__answered {
+  background-color: green;
+  color: white;
 }

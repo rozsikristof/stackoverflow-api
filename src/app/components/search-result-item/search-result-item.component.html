@@ -1,14 +1,24 @@
 <li class="search-result">
   <div class="search-result__number-details">
     <span>{{ searchItem.score }} votes</span>
-    <span>{{ searchItem.answer_count }} answers</span>
+    <span
+      [class.search-result__answer]="searchItem.answer_count > 0"
+      [class.search-result__answered]="searchItem.is_answered"
+    >
+      <i *ngIf="searchItem.is_answered" class="fa-solid fa-check"></i>
+      {{ searchItem.answer_count }} answers
+    </span>
     <span>{{ searchItem.view_count }} views</span>
   </div>
-  <div>
-    <span>
+  <div class="search-result__text-details">
+    <h3
+      class="search-result__title"
+      aria-label="Open Stackoverflow question in new tab"
+      (click)="openQuestionInNewTab()"
+    >
       {{ searchItem.title }}
       <i class="fa-solid fa-up-right-from-square"></i>
-    </span>
+    </h3>
   </div>
 </li>
 
