@@ -4,7 +4,7 @@ import { SearchResultItem } from 'src/app/common/interfaces/search-api.interface
 import { TagsComponent } from '../tags/tags.component';
 import * as he from 'he';
 
-const importedComponents = [
+const IMPORTED_COMPONENTS = [
   CommonModule,
   TagsComponent
 ];
@@ -14,7 +14,7 @@ const MIN_THOUSAND = 1000;
 @Component({
   selector: 'app-search-result-item',
   standalone: true,
-  imports: [importedComponents],
+  imports: [IMPORTED_COMPONENTS],
   templateUrl: './search-result-item.component.html',
   styleUrls: ['./search-result-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -47,5 +47,9 @@ export class SearchResultItemComponent {
 
   openQuestionInNewTab(): void {
     window.open(this.searchItem.link, '_blank');
+  }
+
+  openUserProfileInNewTab(): void {
+    window.open(this.searchItem.owner.link, '_blank');
   }
 }

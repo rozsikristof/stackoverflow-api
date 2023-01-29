@@ -4,7 +4,7 @@ import { AbstractControl, FormGroup, FormsModule, ReactiveFormsModule } from '@a
 import { NgxTrimDirectiveModule } from 'ngx-trim-directive';
 import { OnInit } from '@angular/core';
 
-const importedComponents = [
+const IMPORTED_COMPONENTS = [
   CommonModule,
   FormsModule,
   NgxTrimDirectiveModule,
@@ -14,7 +14,7 @@ const importedComponents = [
 @Component({
   selector: 'app-input-field',
   standalone: true,
-  imports: [importedComponents],
+  imports: [IMPORTED_COMPONENTS],
   templateUrl: './input-field.component.html',
   styleUrls: ['./input-field.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

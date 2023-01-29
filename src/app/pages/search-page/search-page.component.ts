@@ -12,7 +12,7 @@ import { FormatError } from 'src/app/common/pipes/format-error';
 import { LoadingComponent } from 'src/app/components/common/loading/loading.component';
 import { AbstractControl, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-const importedComponents = [
+const IMPORTED_COMPONENTS = [
   CommonModule,
   InputFieldComponent,
   SearchResultItemComponent,
@@ -25,7 +25,7 @@ const importedComponents = [
 @Component({
   selector: 'app-search-page',
   standalone: true,
-  imports: [importedComponents],
+  imports: [IMPORTED_COMPONENTS],
   templateUrl: './search-page.component.html',
   styleUrls: ['./search-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

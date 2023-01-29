@@ -25,9 +25,15 @@
     <app-tags [tags]="searchItem.tags"></app-tags>
     <div class="search-result__user">
       <img class="search-result__user-avatar" [src]="searchItem.owner.profile_image" />
-      <span class="search-result__user-name">
-        {{ searchItem.owner.display_name }}
-        <span class="search-result__date"> asked {{ searchItem.creation_date }}</span>
+      <span class="search-result__user-info">
+        <span
+          class="search-result__user-name"
+          aira-label="Open Stackoverflow user profile in new tab"
+          (click)="openUserProfileInNewTab()"
+        >
+          {{ searchItem.owner.display_name }}
+        </span>
+        <span> asked {{ searchItem.creation_date }}</span>
       </span>
     </div>
   </div>
