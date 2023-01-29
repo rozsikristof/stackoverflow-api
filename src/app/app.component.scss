@@ -1,7 +1,9 @@
+@import 'mixins';
+
 .app__header {
   height: 75px;
-  display: flex;
-  justify-content: center;
+
+  @include flex()
 }
 
 .app__header-title {
@@ -9,21 +11,19 @@
 }
 
 .app__header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
   height: 100%;
   width: 800px;
   background-color: #e39309;
   border-bottom-right-radius: 40px;
   border-bottom-left-radius: 40px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+  @include flex($justify-content: space-evenly);
 }
 
 .app__header-navbar {
   width: 250px;
-  display: flex;
-  justify-content: space-around;
+  @include flex($justify-content: space-around);
 }
 
 .app__header-nav-button {

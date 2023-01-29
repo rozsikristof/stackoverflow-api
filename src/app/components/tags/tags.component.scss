@@ -1,0 +1,13 @@
+@import 'mixins';
+
+.tags {
+  @include flex($align-items: start, $justify-content: start);
+}
+
+.tags_item {
+  border: 1px solid transparent;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 6px;
+  background-color: #8fc7c2;
+}

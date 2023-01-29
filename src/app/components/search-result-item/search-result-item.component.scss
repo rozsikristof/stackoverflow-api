@@ -1,9 +1,9 @@
 @import 'variables';
+@import 'mixins';
 
 .search-result {
   width: 700px;
-  display: flex;
-  height: 140px;
+  height: 180px;
   border: 1px solid black;
   margin-bottom: 10px;
   padding: 20px 10px;
@@ -16,17 +16,21 @@
     background-color: #abaaa9;
     border-color: white;
   }
+
+  @include flex($align-items: start);
 }
 
 .search-result__number-details {
   flex: 1;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-right: 15px;
+  margin-right: 20px;
   font-weight: 600;
+
+  span {
+    margin-bottom: 14px;
+  }
+
+  @include flex($flex-direction: column, $align-items: flex-end, $justify-content: start);
 }
 
 .search-result__text-details {
@@ -54,4 +58,13 @@
 .search-result__answered {
   background-color: green;
   color: white;
+}
+
+.search-result__user {
+  float: right;
+}
+
+.search-result__user-avatar {
+  height: 20px;
+  border-radius: 50%;
 }

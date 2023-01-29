@@ -19,6 +19,10 @@
       {{ searchItem.title }}
       <i class="fa-solid fa-up-right-from-square"></i>
     </h3>
+    <app-tags [tags]="searchItem.tags"></app-tags>
+    <div class="class-result__user">
+      <img class="search-result__user-avatar" [src]="searchItem.owner.profile_image" />
+    </div>
   </div>
 </li>
 
