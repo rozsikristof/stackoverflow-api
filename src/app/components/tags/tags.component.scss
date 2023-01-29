@@ -1,5 +1,9 @@
 @import 'mixins';
 
+:host {
+  flex: 1;
+}
+
 .tags {
   @include flex($align-items: start, $justify-content: start);
 }
@@ -10,4 +14,5 @@
   margin-right: 5px;
   border-radius: 6px;
   background-color: #8fc7c2;
+  white-space: pre;
 }

@@ -39,7 +39,6 @@
         "no-unexpected-multiline": "warn",
         "no-unreachable": "warn",
         "no-unsafe-finally": "warn",
-        "camelcase": "warn",
         "eqeqeq": "error",
         "no-else-return": "warn",
         "no-inline-comments": "warn",

@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import { Injectable } from '@angular/core';
 import axios from 'axios';
 import * as he from 'he';

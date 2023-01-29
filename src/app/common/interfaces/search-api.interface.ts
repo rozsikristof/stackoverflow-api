@@ -28,7 +28,7 @@ export interface SearchResultItem {
   answer_count: number;
   score: number;
   last_activity_date: Date;
-  creation_date: Date;
+  creation_date: any;
   question_id: number;
   content_license: string;
   link: string;
