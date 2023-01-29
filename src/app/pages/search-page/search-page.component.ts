@@ -51,22 +51,26 @@ export class SearchPageComponent {
   }
 
   private async executeSearch(): Promise<void> {
+    this.initializeData();
+
     if (!this.searchTerm) {
-      this.searchResult$.next([]);
-      this.isLoading = false;
       return;
     }
 
     const searchParams: SearchParams = {
-      intitle: this.searchTerm
+      intitle: this.searchTerm,
+      page: 1
     };
 
     this.isLoading = true;
 
     await this.searchService.search(searchParams).then(result => {
-      this.searchHasParsingError$.next(result.parse_error);
+
+      if (result.items?.length) {
+        this.searchHasParsingError$.next(result.parse_error);
+      }
+
       this.searchResult$.next(result.items);
-      this.searchResultsError$.next(null);
     }).catch((error: AxiosError) => {
       this.searchResultsError$.next(error.response?.data as ErrorResponse);
     });
@@ -81,5 +85,11 @@ export class SearchPageComponent {
       },
       queryParamsHandling: 'merge'
     });
+  }
+
+  private initializeData(): void {
+    this.searchResult$.next([]);
+    this.searchResultsError$.next(null);
+    this.searchHasParsingError$.next(false);
   }
 }
