@@ -2,8 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: scroll;
+  height: calc(100vh - 110px);
 }
 
 .search__answer-wrapper {
-  margin-top: 30px;
+  list-style-type: none;
+  padding: 0;
 }

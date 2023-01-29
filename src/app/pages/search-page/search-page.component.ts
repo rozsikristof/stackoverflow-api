@@ -43,6 +43,7 @@ export class SearchPageComponent {
 
   private async executeSearch(): Promise<void> {
     if (!this.searchTerm) {
+      this.searchResult$.next([]);
       return;
     }
 

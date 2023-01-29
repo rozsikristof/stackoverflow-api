@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import axios from 'axios';
+import * as he from 'he';
 import { SearchParams, SearchResults } from '../common/interfaces/search-api.interface';
 
 const SEARCH_API = 'https://api.stackexchange.com/2.3/search';
@@ -16,6 +17,8 @@ export class SearchService {
       }
     });
 
-    return result.data;
+    const decodedHTMLentities = he.decode(JSON.stringify(result.data));
+
+    return JSON.parse(decodedHTMLentities);
   }
 }
