@@ -1,0 +1,73 @@
+@import 'variables';
+@import 'mixins';
+
+:host {
+  overflow-y: scroll;
+  height: calc(100vh - 110px);
+  margin-top: 30px;
+
+  @include flex($flex-direction: column, $justify-content: flex-start);
+}
+
+.search__answer-wrapper {
+  width: $default-width;
+  list-style-type: none;
+  padding: 0;
+}
+
+.search__error {
+  font-size: 24px;
+  border: 2px solid black;
+  border-color: $error-color;
+  background-color: $error-color;
+  padding: 40px 20px;
+  border-radius: 20px;
+  color: white;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.parse-error {
+  width: $default-width;
+  padding: 3px 0;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search__no-result {
+  font-size: 42px;
+  color: gray;
+}
+
+.search__sumbit-button {
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: .3s;
+  padding: 8px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lightblue;
+  }
+}
+
+.search_results-text {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.h2 {
+  margin-bottom: 12px;
+}
+
+.h3 {
+  margin-bottom: 10px;
+}

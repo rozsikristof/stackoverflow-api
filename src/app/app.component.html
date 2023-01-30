@@ -1,1 +1,26 @@
-<router-outlet></router-outlet>
+<header class="app__header">
+  <div class="app__header-container">
+    <h1 class="app__header-title">
+      Stackoverflow API Application
+    </h1>
+    <nav #navBar class="app__header-navbar">
+      <button
+        class="app__header-nav-button"
+        routerLink="search"
+        routerLinkActive="app__header-nav-button--active"
+      >
+        Search
+      </button>
+      <button
+        class="app__header-nav-button"
+        routerLink="user-info"
+        routerLinkActive="app__header-nav-button--active"
+      >
+        User Info
+      </button>
+    </nav>
+  </div>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>

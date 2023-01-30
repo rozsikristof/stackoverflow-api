@@ -1,0 +1,47 @@
+@import 'mixins';
+
+.app__header {
+  height: 75px;
+
+  @include flex()
+}
+
+.app__header-title {
+  font-size: 24px;
+}
+
+.app__header-container {
+  height: 100%;
+  width: 800px;
+  background-color: #e39309;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+  @include flex($justify-content: space-evenly);
+}
+
+.app__header-navbar {
+  width: 250px;
+  @include flex($justify-content: space-around);
+}
+
+.app__header-nav-button {
+  background-color: wheat;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+  transition: .3s;
+
+  &:hover {
+    background-color: white;
+    border-color: black;
+  }
+
+  &--active {
+    background-color: white;
+  }
+}

@@ -32,6 +32,11 @@
               "zone.js"
             ],
             "inlineStyleLanguage": "scss",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/scss"
+              ]
+            },
             "assets": [
               "src/assets"
             ],

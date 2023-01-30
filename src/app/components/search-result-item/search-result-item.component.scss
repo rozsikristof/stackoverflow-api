@@ -1,0 +1,86 @@
+@import 'variables';
+@import 'mixins';
+
+.search-result {
+  height: 200px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  padding: 20px;
+  box-shadow: $simple-box-shadow;
+  background-color: #d4d4d4;
+  border-radius: 10px;
+  transition: .1s;
+
+  &:hover {
+    background-color: #abaaa9;
+    border-color: white;
+  }
+
+  @include flex($align-items: flex-start);
+}
+
+.search-result__number-details {
+  flex: 1;
+  height: 100%;
+  margin-right: 20px;
+  font-weight: 600;
+
+  span {
+    margin-bottom: 14px;
+  }
+
+  @include flex($flex-direction: column, $align-items: flex-end, $justify-content: flex-start);
+}
+
+.search-result__text-details {
+  flex: 4;
+  height: 100%;
+
+  @include flex($flex-direction: column, $align-items: flex-start, $justify-content: flex-start);
+}
+
+.search-result__title {
+  margin: 0;
+  font-size: 16px;
+  color: #1f5180;
+  cursor: pointer;
+}
+
+.fa-up-right-from-square {
+  margin-left: 3px;
+}
+
+.search-result__answer {
+  border: 1px solid green;
+  border-radius: 5px;
+  padding: 5px 8px;
+  width: fit-content;
+}
+
+.search-result__answered {
+  background-color: green;
+  color: white;
+}
+
+.search-result__user {
+  align-self: flex-end;
+
+  @include flex()
+}
+
+.search-result__user-avatar {
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-top: 1px;
+}
+
+.search-result__user-info {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.search-result__user-name {
+  color: #3c6e7d;
+  cursor: pointer;
+}
