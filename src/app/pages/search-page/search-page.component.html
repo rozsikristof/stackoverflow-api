@@ -8,21 +8,26 @@
   <button class="search__sumbit-button" type="submit">Search</button>
 </form>
 
-<h2>Search Results</h2>
+<h2 class="h2">Search Results</h2>
 <h3
-  *ngIf="!isLoading && (searchResult$ | async) !== null"
-  class="search_results-text"
+  *ngIf="(searchResult$ | async) !== null"
+  class="search_results-text h3"
 >
   Results for '{{ searchTerm }}'
 </h3>
 
-<p *ngIf="searchHasParsingError$ | async" class="search__error parse-error">
+<p
+  *ngIf="(searchHasParsingError$ | async) && !hideError"
+  class="search__error parse-error"
+  (click)="hideErrorMessage()"
+>
   Some text might be poorly rendered due to parsing error!
 </p>
 
 <app-pagination
   *ngIf="!isLoading && (searchResult$ | async)?.length"
   [pageNumber]="pageNumber"
+  (pageNumberChangeEvent)="pageNumberChangeEvent($event)"
 ></app-pagination>
 <ul *ngIf="(searchResult$ | async)?.length" class="search__answer-wrapper">
   <ng-container *ngFor="let searchItem of (searchResult$ | async)">
@@ -37,7 +42,8 @@
   Eneter a keyword and start searching! :)
 </p>
 <p *ngIf="searchResultsError$ | async" class="search__error">
-  {{ (searchResultsError$ | async).error_message | formatError }}
+  <span *ngIf="(searchResultsError$ | async).error_id !== 403">{{ (searchResultsError$ | async).error_message | formatError }}</span>
+  <span *ngIf="(searchResultsError$ | async).error_id === 403">{{ (searchResultsError$ | async).error_message }}</span>
 </p>
 
 <app-loading *ngIf="isLoading"></app-loading>

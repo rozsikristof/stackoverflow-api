@@ -6,12 +6,15 @@
 
 .tags {
   @include flex($align-items: flex-start, $justify-content: flex-start);
+  flex-wrap: wrap;
 }
 
 .tags_item {
+  margin: 0;
   border: 1px solid transparent;
   padding: 5px 10px;
   margin-right: 5px;
+  margin-top: 10px;
   border-radius: 6px;
   background-color: #8fc7c2;
   white-space: pre;

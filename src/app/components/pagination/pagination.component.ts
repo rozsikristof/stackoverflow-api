@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Input } from '@angular/core';
-import { ChangeDetectorRef } from '@angular/core';
+
 
 @Component({
   selector: 'app-pagination',
@@ -12,10 +12,10 @@ import { ChangeDetectorRef } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PaginationComponent {
+  @Output() pageNumberChangeEvent = new EventEmitter<boolean>();
   @Input() set pageNumber(value: number) {
     this._pageNumber = value;
     this.isPreviousDisabled = value === 1;
-    this.cdRef.markForCheck();
   }
 
   get pageNumber(): number {
@@ -24,7 +24,15 @@ export class PaginationComponent {
 
   private _pageNumber = 1;
 
-  constructor(private readonly cdRef: ChangeDetectorRef) {}
-
   isPreviousDisabled = false;
+
+  changePageNumber(isPreviousClicked: boolean): void {
+    if (isPreviousClicked) {
+      if (this.pageNumber > 1) {
+        this.pageNumberChangeEvent.emit(isPreviousClicked);
+      }
+    } else {
+      this.pageNumberChangeEvent.emit(isPreviousClicked);
+    }
+  }
 }

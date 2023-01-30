@@ -1,20 +1,20 @@
 <div class="pagination">
-  <span
+  <button
     class="pagination__button"
-    [class.pagination__button--disabled]="isPreviousDisabled"
+    [disabled]="isPreviousDisabled"
+    (click)="changePageNumber(true)"
   >
     <i class="fa-solid fa-chevron-left"></i>
-    Previous page
-  </span>
+  </button>
   <span class="pagination__number">
     {{ pageNumber }}
   </span>
-  <span
+  <button
     class="pagination__button"
     [class.pagination__button--disabled]="isPreviousDisabled"
+    (click)="changePageNumber(false)"
   >
-    Next page
     <i class="fa-solid fa-chevron-right"></i>
-  </span>
+  </button>
 </div>
 

@@ -41,6 +41,7 @@ export class SearchPageComponent {
   searchHasParsingError$ = new BehaviorSubject<boolean>(false);
   isLoading = false;
   pageNumber = 1;
+  hideError = false;
 
   constructor(
     private readonly router: Router,
@@ -48,7 +49,7 @@ export class SearchPageComponent {
     private readonly searchService: SearchService
   ) {
     this.searchTerm = this.activatedRoute.snapshot.queryParams['searchTerm'];
-    this.pageNumber = this.activatedRoute.snapshot.queryParams['pageNumber'] || 1;
+    this.pageNumber = +this.activatedRoute.snapshot.queryParams['pageNumber'] || 1;
     this.initializeForm();
     this.executeSearch();
   }
@@ -56,7 +57,9 @@ export class SearchPageComponent {
   async executeSearch(): Promise<void> {
     this.initializeData();
 
-    this.searchTerm = this.getFormControl('searchTerm').value;
+    if (!this.searchTerm) {
+      this.searchTerm = this.getFormControl('searchTerm').value;
+    }
 
     if (!this.searchTerm) {
       this.searchResult$.next(null);
@@ -84,6 +87,15 @@ export class SearchPageComponent {
     });
 
     this.isLoading = false;
+  }
+
+  pageNumberChangeEvent(isPreviousClicked: boolean): void {
+    isPreviousClicked ? this.pageNumber-- : this.pageNumber++;
+    this.executeSearch();
+  }
+
+  hideErrorMessage(): void {
+    this.hideError = true;
   }
 
   private getFormControl(controlName: string): AbstractControl {
