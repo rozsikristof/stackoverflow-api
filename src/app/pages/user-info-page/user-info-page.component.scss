@@ -1,0 +1,16 @@
+@import 'mixins';
+
+.user-info {
+  height: 100%;
+  width: 100%;
+  margin-top: 50px;
+
+  @include flex();
+}
+
+.user-info__inner {
+  width: 1200px;
+  height: 100%;
+  background-color: #3b3b3b;
+  border-radius: 15px;
+}

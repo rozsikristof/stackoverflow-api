@@ -38,7 +38,6 @@ export class SearchPageComponent {
   searchFormGroup: FormGroup = {} as FormGroup;
   searchResult$ = new BehaviorSubject<SearchResultItem[] | null>(null);
   searchResultsError$ = new BehaviorSubject<ErrorResponse | null>(null);
-  searchHasParsingError$ = new BehaviorSubject<boolean>(false);
   isLoading = false;
   pageNumber = 1;
   hideError = false;
@@ -57,9 +56,7 @@ export class SearchPageComponent {
   async executeSearch(): Promise<void> {
     this.initializeData();
 
-    if (!this.searchTerm) {
-      this.searchTerm = this.getFormControl('searchTerm').value;
-    }
+    this.searchTerm = this.getFormControl('searchTerm').value;
 
     if (!this.searchTerm) {
       this.searchResult$.next(null);
@@ -76,12 +73,7 @@ export class SearchPageComponent {
     this.isLoading = true;
 
     await this.searchService.search(searchParams).then(result => {
-
-      if (result.items?.length) {
-        this.searchHasParsingError$.next(result.parse_error);
-      }
-
-      this.searchResult$.next(result.items);
+    this.searchResult$.next(result.items);
     }).catch((error: AxiosError) => {
       this.searchResultsError$.next(error.response?.data as ErrorResponse);
     });
@@ -115,7 +107,6 @@ export class SearchPageComponent {
   private initializeData(): void {
     this.searchResult$.next([]);
     this.searchResultsError$.next(null);
-    this.searchHasParsingError$.next(false);
   }
 
   private initializeForm(): void {

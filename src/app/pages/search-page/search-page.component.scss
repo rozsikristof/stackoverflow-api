@@ -29,16 +29,10 @@
   }
 }
 
-.parse-error {
-  width: $default-width;
-  padding: 3px 0;
-  text-align: center;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 .search__no-result {
+  display: flex;
+  flex: 1;
+  align-items: center;
   font-size: 42px;
   color: gray;
 }
@@ -69,5 +63,5 @@
 }
 
 .h3 {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
