@@ -1,28 +1,24 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InputFieldComponent } from 'src/app/components/common/input-field/input-field.component';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SearchService } from 'src/app/api/search.service';
 import { SearchParams, SearchResultItem } from 'src/app/common/interfaces/search-api.interface';
 import { SearchResultItemComponent } from 'src/app/components/search-result-item/search-result-item.component';
 import { BehaviorSubject } from 'rxjs';
 import { ErrorResponse } from 'src/app/common/interfaces/error-response.interface';
-import { AxiosError } from 'axios';
-import { FormatError } from 'src/app/common/pipes/format-error';
 import { LoadingComponent } from 'src/app/components/common/loading/loading.component';
-import { AbstractControl, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PaginationComponent } from 'src/app/components/pagination/pagination.component';
+import { SearchFormComponent } from 'src/app/components/common/search-form/search-form.component';
+import { ErrorComponent } from 'src/app/components/common/error/error.component';
 
 
 const IMPORTED_COMPONENTS = [
   CommonModule,
-  InputFieldComponent,
   SearchResultItemComponent,
-  FormatError,
   LoadingComponent,
-  ReactiveFormsModule,
-  FormsModule,
-  PaginationComponent
+  PaginationComponent,
+  SearchFormComponent,
+  ErrorComponent
 ];
 
 @Component({
@@ -35,7 +31,6 @@ const IMPORTED_COMPONENTS = [
 })
 export class SearchPageComponent {
   searchTerm = '';
-  searchFormGroup: FormGroup = {} as FormGroup;
   searchResult$ = new BehaviorSubject<SearchResultItem[] | null>(null);
   searchResultsError$ = new BehaviorSubject<ErrorResponse | null>(null);
   isLoading = false;
@@ -49,14 +44,13 @@ export class SearchPageComponent {
   ) {
     this.searchTerm = this.activatedRoute.snapshot.queryParams['searchTerm'];
     this.pageNumber = +this.activatedRoute.snapshot.queryParams['pageNumber'] || 1;
-    this.initializeForm();
-    this.executeSearch();
+    this.executeSearch(this.searchTerm);
   }
 
-  async executeSearch(): Promise<void> {
+  async executeSearch(event: string): Promise<void> {
     this.initializeData();
 
-    this.searchTerm = this.getFormControl('searchTerm').value;
+    this.searchTerm = event;
 
     if (!this.searchTerm) {
       this.searchResult$.next(null);
@@ -72,26 +66,23 @@ export class SearchPageComponent {
 
     this.isLoading = true;
 
-    await this.searchService.search(searchParams).then(result => {
-    this.searchResult$.next(result.items);
-    }).catch((error: AxiosError) => {
-      this.searchResultsError$.next(error.response?.data as ErrorResponse);
-    });
+    try {
+      const result = await this.searchService.search(searchParams);
+      this.searchResult$.next(result.items);
+    } catch(e: any) {
+      this.searchResultsError$.next(e.response?.data as ErrorResponse);
+    }
 
     this.isLoading = false;
   }
 
   pageNumberChangeEvent(isPreviousClicked: boolean): void {
     isPreviousClicked ? this.pageNumber-- : this.pageNumber++;
-    this.executeSearch();
+    this.executeSearch(this.searchTerm);
   }
 
   hideErrorMessage(): void {
     this.hideError = true;
-  }
-
-  private getFormControl(controlName: string): AbstractControl {
-    return this.searchFormGroup.get(controlName);
   }
 
   private async saveSearchTermInQueryParams(): Promise<void> {
@@ -107,13 +98,5 @@ export class SearchPageComponent {
   private initializeData(): void {
     this.searchResult$.next([]);
     this.searchResultsError$.next(null);
-  }
-
-  private initializeForm(): void {
-    this.searchFormGroup = new FormGroup(
-      {
-        searchTerm: new FormControl(this.searchTerm)
-      }
-    );
   }
 }
