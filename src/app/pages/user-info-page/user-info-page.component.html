@@ -1,1 +1,53 @@
-<p>user-info-page works!</p>
+<app-search-form
+  [class.user-info--error]="searchResultsError$ | async"
+  placeholder="Search user by ID form Stackoverflow..."
+  [searchTerm]="searchTerm"
+  (searchValueEvent)="executeSearch($event)"
+></app-search-form>
+
+<app-loading *ngIf="isLoading"></app-loading>
+
+<app-error
+  *ngIf="!isLoading"
+  [errorMessage]="(searchResultsError$ | async)?.error_message"
+  [errorId]="(searchResultsError$ | async)?.error_id"
+></app-error>
+
+<div *ngIf="!isLoading && (searchResultsError$ | async) === false" class="user-info">
+  <div class="user-info__left">
+    <div class="user-info__avatar">
+      <img [src]="userInfo.profile_image" />
+      <p>{{ userInfo.display_name }}</p>
+    </div>
+    <div class="user-info__badges">
+      <p class="user-info__title">Badges</p>
+      <ul class="user-info__badges-list">
+        <li *ngFor="let badge of userBadges">
+          {{ badge.name }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="user-info__right">
+    <div>
+      <p class="user-info__title">Top Tags</p>
+      <app-tags [tags]="userTopTags"></app-tags>
+    </div>
+    <div class="user-info__top-border">
+      <p class="user-info__title">Questions</p>
+      <ul class="user-info__questions">
+        <li *ngFor="let question of userQuestions" (click)="openQuestion(question)">
+          {{ question.title }}
+        </li>
+      </ul>
+    </div>
+    <div class="user-info__top-border">
+      <p class="user-info__title">Answers</p>
+      <ul class="user-info__answers">
+        <li *ngFor="let question of userQuestionOfAnswers" (click)="openQuestion(question)">
+          {{ question.title }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

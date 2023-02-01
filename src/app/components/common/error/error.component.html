@@ -1,0 +1,4 @@
+<p *ngIf="errorMessage" class="search__error">
+  <span *ngIf="errorId !== 403">{{ errorMessage | formatError }}</span>
+  <span *ngIf="errorId === 403">{{ errorMessage }}</span>
+</p>

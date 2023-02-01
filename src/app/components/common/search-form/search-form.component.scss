@@ -1,0 +1,18 @@
+.search-form__sumbit-button {
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: .3s;
+  padding: 8px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lightblue;
+  }
+}
+
+.search-form {
+  margin-top: 30px;
+}

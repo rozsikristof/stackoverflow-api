@@ -1,12 +1,8 @@
-<form (ngSubmit)="executeSearch()">
-  <app-input-field
-    class="search__input"
-    placeholder="Search for a topic on Stackoverflow..."
-    controlName="searchTerm"
-    [group]="searchFormGroup"
-  ></app-input-field>
-  <button class="search__sumbit-button" type="submit">Search</button>
-</form>
+<app-search-form
+  placeholder="Search questions form Stackoverflow..."
+  [searchTerm]="searchTerm"
+  (searchValueEvent)="executeSearch($event)"
+></app-search-form>
 
 <h2 class="h2">Search Results</h2>
 <h3
@@ -16,24 +12,15 @@
   Results for '{{ searchTerm }}'
 </h3>
 
-<p
-  *ngIf="(searchHasParsingError$ | async) && !hideError"
-  class="search__error parse-error"
-  (click)="hideErrorMessage()"
->
-  Some text might be poorly rendered due to parsing error!
-</p>
+<ng-container *ngTemplateOutlet="pagination"></ng-container>
 
-<app-pagination
-  *ngIf="!isLoading && (searchResult$ | async)?.length"
-  [pageNumber]="pageNumber"
-  (pageNumberChangeEvent)="pageNumberChangeEvent($event)"
-></app-pagination>
 <ul *ngIf="(searchResult$ | async)?.length" class="search__answer-wrapper">
   <ng-container *ngFor="let searchItem of (searchResult$ | async)">
     <app-search-result-item [searchItem]="searchItem"></app-search-result-item>
   </ng-container>
 </ul>
+
+<ng-container *ngTemplateOutlet="pagination"></ng-container>
 
 <p *ngIf="(searchResult$ | async)?.length === 0 && !isLoading" class="search__no-result">
   No results :(
@@ -41,9 +28,19 @@
 <p *ngIf="(searchResult$ | async) === null" class="search__no-result">
   Eneter a keyword and start searching! :)
 </p>
-<p *ngIf="searchResultsError$ | async" class="search__error">
-  <span *ngIf="(searchResultsError$ | async).error_id !== 403">{{ (searchResultsError$ | async).error_message | formatError }}</span>
-  <span *ngIf="(searchResultsError$ | async).error_id === 403">{{ (searchResultsError$ | async).error_message }}</span>
-</p>
+
+<app-error
+  [errorMessage]="(searchResultsError$ | async)?.error_message"
+  [errorId]="(searchResultsError$ | async)?.error_id"
+></app-error>
 
 <app-loading *ngIf="isLoading"></app-loading>
+
+<ng-template #pagination>
+  <app-pagination
+    *ngIf="!isLoading && (searchResult$ | async)?.length"
+    [pageNumber]="pageNumber"
+    (pageNumberChangeEvent)="pageNumberChangeEvent($event)"
+  ></app-pagination>
+</ng-template>
+

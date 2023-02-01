@@ -1,0 +1,13 @@
+<form class="search-form" (ngSubmit)="submitForm()">
+  <app-input-field
+    [group]="formGroup"
+    [placeholder]="placeholder"
+    controlName="searchTerm"
+  ></app-input-field>
+  <button
+    class="search-form__sumbit-button"
+    type="submit"
+  >
+    Search
+  </button>
+</form>
